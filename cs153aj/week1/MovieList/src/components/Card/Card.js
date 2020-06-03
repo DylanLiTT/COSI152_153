@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ movie }) => {
+const Card = ({ course }) => {
   return (
     <div className='card'>
-      <img src={movie.img.src} className='card-img-top' alt={movie.img.alt} />
+      <img src={course.picture} className='card-img-top' alt={"no pic found"} />
       <div className='card-body'>
-        <h2 className='card-title'>{`#${movie.ranking} - ${movie.title} (${movie.year})`}</h2>
+        <h2 className='card-title'>{`${course.coursenum} - ${course.title}`}</h2>
       </div>
       <ul className='list-group list-group-flush'>
-        <li className='list-group-item'>{`Distributor: ${movie.distributor}`}</li>
-        <li className='list-group-item'>{`Amount: ${movie.amount}`}</li>
+        <li className='list-group-item'>{`Instructor: ${course.instructor}`}</li>
+        <li className='list-group-item'>{`Session: ${course.session}`}</li>
       </ul>
     </div>
   );
 };
 
 Card.propTypes = {
-  movie: PropTypes.object.isRequired
+  course: PropTypes.object.isRequired
 }
 /*
 Card.propTypes = {

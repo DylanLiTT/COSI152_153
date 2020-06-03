@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const  MovieList = ({data,title}) => {
+const  ClassList = ({data,title}) => {
   return (
    <>
      <h1> {title} </h1>
      <ul>
-       {data.map(movie => (
-         <li key={movie.id}>
-           {movie.amount} -- {movie.title}
+       {data.map(course => (
+         <li key={course.id}>
+           {course.coursenum} -- {course.title}
          </li>
        ))}
      </ul>
@@ -17,10 +17,10 @@ const  MovieList = ({data,title}) => {
  );
 }
 
-MovieList.propTypes = {
+ClassList.propTypes = {
     data: PropTypes.array.isRequired,
     title: PropTypes.string.isRequired,
 };
 
 
-export default MovieList;
+export default ClassList;

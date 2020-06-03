@@ -2,29 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardList from './containers/CardList';
-import MovieList from './containers/MovieList';
+import ClassList from './containers/ClassList';
 
-import movieData from '../assets/data.js'
+//import movieData from '../assets/data.js'
+import classData from '../assets/classes.js'
 
 
 const App = () => {
   return (
    <>
     <div className="jumbotron">
-    <h1>Top Grossing Movies</h1>
-    <p>This is a React demo showing how to create HTML from data</p>
+    <h1>Summer Course 2020 (Computer Science)</h1>
+    <p>Team2</p>
     </div>
 
-    <MovieList data={movieData} title="List of Movies by Earnings" />
+    <ClassList data={classData} title="List of Summer CS Courses" />
+
     <pre>
-    {JSON.stringify(movieData,null,4)}
+    {JSON.stringify(classData,null,4)}
     </pre>
+
     <div className='container-fluid'>
       <nav className='navbar sticky-top navbar-light bg-dark'>
         <h1 className='navbar-brand text-light'>MovieList</h1>
       </nav>
 
-      <CardList data={movieData} />
+      <CardList data={classData} /> //
 
 
     </div>

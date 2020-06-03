@@ -1,11 +1,11 @@
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  background-color: green;
+  background-color: orange;
 }
 
 .flex-container-element {
-  background-color: #000000;
+  background-color: #FFFFFF;
   width: 300px;
   margin: 10px;
   text-align: center;
