@@ -47,14 +47,34 @@ router.get("/tt.jpg", (req, res) => {
   utils.getFile("public/images/tt.jpg", res);
 });
 
-router.get("/bio.html", (req, res) => {
+router.get("/bioSum.html", (req, res) => {
   res.writeHead(httpStatus.OK, contentTypes.html);
-  utils.getFile("views/bio.html", res);
+  utils.getFile("views/bioSum.html", res);
+});
+
+router.get("/JY_bio.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/JY_bio.html", res);
+});
+
+router.get("/WL_bio.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/WL_bio.html", res);
 });
 
 router.get("/product.jpg", (req, res) => {
   res.writeHead(httpStatus.OK, contentTypes.jpg);
   utils.getFile("public/images/product.jpg", res);
+});
+
+router.get("/KL_bio.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/KL_bio.html", res);
+});
+
+router.get("/KZ_bio.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/KZ_bio.html", res);
 });
 
 router.get("/confetti_cuisine.css", (req, res) => {
