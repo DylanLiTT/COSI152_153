@@ -18,9 +18,11 @@ const App = () => {
 
     <ClassList data={classData} title="List of Summer CS Courses" />
 
+   /*
     <pre>
     {JSON.stringify(classData,null,4)}
     </pre>
+  */
 
     <div className='container-fluid'>
       <nav className='navbar sticky-top navbar-light bg-dark'>

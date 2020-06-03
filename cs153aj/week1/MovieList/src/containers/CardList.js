@@ -20,5 +20,4 @@ CardList.propTypes = {
     data: PropTypes.array.isRequired,
 };
 
-
 export default CardList;

@@ -11,6 +11,7 @@ const Card = ({ course }) => {
       <ul className='list-group list-group-flush'>
         <li className='list-group-item'>{`Instructor: ${course.instructor}`}</li>
         <li className='list-group-item'>{`Session: ${course.session}`}</li>
+        <li className='list-group-item'>{`Schedule: ${course.schedule}`}</li>
       </ul>
     </div>
   );

@@ -6,9 +6,11 @@
 
 .flex-container-element {
   background-color: #FFFFFF;
-  width: 300px;
+  width: 350px;
   margin: 10px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 75px;
   font-size: 30px;
 }
