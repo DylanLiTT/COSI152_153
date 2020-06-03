@@ -42,6 +42,31 @@ router.get("/people.jpg", (req, res) => {
   utils.getFile("public/images/people.jpg", res);
 });
 
+router.get("/photo.jpg", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.jpg);
+  utils.getFile("public/images/photo.jpg", res);
+});
+
+router.get("/preview.jpg", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.jpg);
+  utils.getFile("public/images/preview.jpg", res);
+});
+
+router.get("/wall.jpg", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.jpg);
+  utils.getFile("public/images/wall.jpg", res);
+});
+
+router.get("/myStyle.css", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.css);
+  utils.getFile("public/css/myStyle.css", res);
+});
+
+router.get("/Me.jpeg", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.jpeg);
+  utils.getFile("public/images/Me.jpeg", res);
+});
+
 router.get("/tt.jpg", (req, res) => {
   res.writeHead(httpStatus.OK, contentTypes.jpg);
   utils.getFile("public/images/tt.jpg", res);
