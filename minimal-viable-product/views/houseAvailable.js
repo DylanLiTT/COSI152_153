@@ -16,7 +16,7 @@ const App = () => {
     <p>Team2</p>
     </div>
 
-    <ClassList data={classData} title="List of Summer CS Courses" />
+    <ClassList data={classData} title="Available housing for rent" />
 
    {/*
     <pre>
