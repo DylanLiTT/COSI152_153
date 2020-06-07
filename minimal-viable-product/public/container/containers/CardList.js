@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import Card from '../components/Card/Card';
 import './CardList.css'
 
-const CardList = ({data}) => {
+const CardList = ({housingdata}) => {
   return (
    <div className='flex-container'>
-     {data.map(course => (
+     {housingdata.map(course => (
        <div key={course.id} className='flex-container-element'>
          <Card course={course} />
        </div>
