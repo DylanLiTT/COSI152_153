@@ -22,7 +22,7 @@ export default
   
   {
     "name": "The Edison one the Charles",
-    "address": "25 Crescent St",
+    "address": "20 Cooper Street",
     "price": " ‎$2,425.00 ~ $4,050.00",
     "img": {
       "src": "https://www.edisononthecharles.com/assets/img/edison-on-the-charles-exterior-2019-01.jpg",
