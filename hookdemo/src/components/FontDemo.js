@@ -24,7 +24,7 @@ const FontDemo = () => {
           <p>
             Here we create and use state to change the style of this page.
           </p>
-          
+
           font size:
           <select value={fontSize} onChange={handleSelectFontEvent}>
             <option>12pt</option>
