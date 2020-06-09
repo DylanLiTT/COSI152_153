@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 const Card = ({ apt }) => {
   return (
-    <div className='card'>
-      <img src={apt.img} className='card-img-top' alt={"no pic found"} />
+    <div className='card' class="col-sm-4">
+      <img src={apt.img.src} height="200" width="80" className='card-img-top' alt={"no pic found"} />
       <div className='card-body'>
-        <h2 className='card-title'>{`${apt.name}`}</h2>
+        <h2>
+          <a href={apt.url} className='card-title'>{`${apt.name}`}</a>
+        </h2>
       </div>
       <ul className='list-group list-group-flush'>
         <li className='list-group-item'>{`Address: ${apt.address}`}</li>

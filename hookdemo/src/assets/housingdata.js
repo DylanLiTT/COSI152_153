@@ -9,6 +9,7 @@ export default
       "src": "https://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/2500-1/longview-place-apartments-building.jpg",
       "alt": "Longview"
     },
+    "url":"https://www.equityapartments.com/greater-boston/waltham/longview-place-apartments",
   },
 
   {
@@ -20,6 +21,7 @@ export default
       "src": "https://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/4068-83/cronins-landing-apartments-exterior.jpg",
       "alt": "Cronins"
     },
+    "url":"https://www.equityapartments.com/greater-boston/waltham/cronins-landing-apartments",
   },
 
   {
@@ -31,6 +33,7 @@ export default
       "src": "https://www.edisononthecharles.com/assets/img/edison-on-the-charles-exterior-2019-01.jpg",
       "alt": "Edison"
     },
+    "url":"https://www.edisononthecharles.com/#/",
   },
 
   {
@@ -42,5 +45,6 @@ export default
       "src": "https://i1.wp.com/bostonrealestatetimes.com/wp-content/uploads/2017/10/Merc-Photo-Gregg-Shupe-Shupestudios-e1507833964953.jpg?fit=820%2C546&ssl=1",
       "alt": "Merc"
     },
+    "url":"https://www.liveatthemerc.com/",
   }
 ]
