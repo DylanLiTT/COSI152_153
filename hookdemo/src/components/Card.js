@@ -1,24 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ course }) => {
+const Card = ({ apt }) => {
   return (
     <div className='card'>
-      <img src={course.picture} className='card-img-top' alt={"no pic found"} />
+      <img src={apt.img} className='card-img-top' alt={"no pic found"} />
       <div className='card-body'>
-        <h2 className='card-title'>{`${course.coursenum} - ${course.title}`}</h2>
+        <h2 className='card-title'>{`${apt.name}`}</h2>
       </div>
       <ul className='list-group list-group-flush'>
-        <li className='list-group-item'>{`Instructor: ${course.instructor}`}</li>
-        <li className='list-group-item'>{`Session: ${course.session}`}</li>
-        <li className='list-group-item'>{`Schedule: ${course.schedule}`}</li>
+        <li className='list-group-item'>{`Address: ${apt.address}`}</li>
+        <li className='list-group-item'>{`Price Range: ${apt.price}`}</li>
       </ul>
     </div>
   );
 };
 
 Card.propTypes = {
-  course: PropTypes.object.isRequired
+  apt: PropTypes.object.isRequired
 }
 /*
 Card.propTypes = {

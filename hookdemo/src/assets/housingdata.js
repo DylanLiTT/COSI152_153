@@ -1,6 +1,7 @@
 export default
 [
   {
+    "id":1,
     "name": "Longview Place Apartment",
     "address": "70 Hope Ave Ste 100",
     "price": " ‎$1,975.00 ~ $3,175.00",
@@ -11,6 +12,7 @@ export default
   },
 
   {
+    "id":2,
     "name": "Cronins Landing Apartment",
     "address": "25 Crescent St",
     "price": " ‎$2,080.00 ~ $2,890.00",
@@ -19,8 +21,9 @@ export default
       "alt": "Cronins"
     },
   },
-  
+
   {
+    "id":3,
     "name": "The Edison one the Charles",
     "address": "20 Cooper Street",
     "price": " ‎$2,425.00 ~ $4,050.00",
@@ -29,8 +32,9 @@ export default
       "alt": "Edison"
     },
   },
-  
+
   {
+    "id":4,
     "name": "The Merc at Moody and Main",
     "address": "45 Moody St",
     "price": " ‎$2,195.00 to $4,780.00",
@@ -40,4 +44,3 @@ export default
     },
   }
 ]
-
