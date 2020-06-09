@@ -1,6 +1,6 @@
 import React from 'react';
 import housingdata from "../assets/housingdata.js";
-import ClassList from "./container/ClassList";
+import ClassList from "../container/ClassList";
 const About = () => {
       return (
         <div>
