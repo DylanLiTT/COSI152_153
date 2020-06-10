@@ -8,3 +8,5 @@ And the info will be posted and other users can see it and contact the leaser.
 For Restaurant, we will try to fetch info from Google for their operating status and menu.
 
 For COVID-19, we also need the technique of fetching info.
+
+![alt text](https://github.com/kzsteph/COSI152_153/blob/Web.png?raw=true)
