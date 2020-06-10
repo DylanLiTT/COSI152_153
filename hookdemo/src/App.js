@@ -12,6 +12,7 @@ import About from "./components/About";
 import FontDemo from "./components/FontDemo";
 import Home from "./components/Home";
 import Covid from "./components/Covid";
+import './background.css'
 
 const LinkStyle = styled.li`
 color: #625a56;

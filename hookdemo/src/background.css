@@ -1,0 +1,13 @@
+
+body {
+  background-color: white;
+  background: url(waltham.jpg);
+  background-repeat:no-repeat;
+  background-position:center top;
+  padding-top: 25px;
+   }
+.backimg{
+    background: url(waltham.jpg);
+    opacity:0.5;
+
+}
