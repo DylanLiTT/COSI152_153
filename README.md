@@ -1,4 +1,5 @@
 # Final Project Description
+
 Our final project is an app building an online community where people in Waltham get updated information on COVID-19, food, houses for rent. 
 App providing real-time information on the operating status of restaurants or grocery stores. They can also check the menu of the currently open ones.
 
@@ -9,4 +10,4 @@ For Restaurant, we will try to fetch info from Google for their operating status
 
 For COVID-19, we also need the technique of fetching info.
 
-![alt text](https://github.com/kzsteph/COSI152_153/blob/Web.png?raw=true)
+![alt text](https://github.com/kzsteph/COSI152_153/blob/master/Web.png?raw=true)
