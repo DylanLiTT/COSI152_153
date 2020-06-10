@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import RestaurantCard from '../components/RestaurantCard';
 import styled from 'styled-components';
+import './List.css'
 
 const CardsWrapper = styled.div`
-  display: block-inline;
+  display: felx;
   flex-wrap: wrap;
 `;
 

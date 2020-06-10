@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from "../components/Card.js";
 import styled from 'styled-components';
+import './List.css'
 
 const CardsWrapper = styled.div`
-  display: block-inline;
+  display: flex;
   flex-wrap: wrap;
 `;
 const  ClassList = ({data}) => {
