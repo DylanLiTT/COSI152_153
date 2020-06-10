@@ -19,21 +19,7 @@ const restaurantCard = ({ restaurant }) => {
 };
 
 restaurantCard.propTypes = {
-  apt: PropTypes.object.isRequired
+  restaurant: PropTypes.object.isRequired
 }
-/*
-Card.propTypes = {
-  movie: PropTypes.shape({
-    title: PropTypes.string,
-    distributor: PropTypes.string,
-    year: PropTypes.number,
-    amount: PropTypes.string,
-    img: PropTypes.shape({
-      src: PropTypes.string,
-      alt: PropTypes.string,
-    }),
-    ranking: PropTypes.number,
-  }).isRequired,
-};
-*/
+
 export default restaurantCard;

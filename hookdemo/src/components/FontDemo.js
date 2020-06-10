@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import BgColor from "./BgColor";
-import restaurantdata from "../assets/restaurantdata";
-import CardList from "../container/CardList"
+import restaurantdata from "../assets/restaurantdata.js";
+import CardList from "../container/CardList";
 const FontDemo = () => {
 
 
@@ -19,13 +19,12 @@ const FontDemo = () => {
             Here we change the mode of this page.
           </p>
           <BgColor bgColor={bgColor} setBgColor={setBgColor} />
+          <h3>Restaurants Opening</h3>
+          <p> This app shows the restaurant that are currently Opening.
+          </p>
+          <CardList restaurantdata={restaurantdata} />
         </div>
 
-        /*<div style={divStyle}>
-      <h2>Restaurants Opening</h2>
-      <p> This app shows the restaurant that are currently Opening.
-      </p>
-      <CardList data={restaurantdata} />*/
 
 
 )
