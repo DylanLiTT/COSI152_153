@@ -10,5 +10,5 @@ For Restaurant, we will try to fetch info from Google for their operating status
 
 For COVID-19, we also need the technique of fetching info.
 
-![alt text](<Web.png>) 
+![alt text](<Web.png>)  
 
