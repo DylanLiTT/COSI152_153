@@ -12,7 +12,7 @@ const RestaurantCard = ({ restaurant }) => {
       </div>
       <ul className='list-group list-group-flush'>
         <li className='list-group-item'>{`Address: ${restaurant.address}`}</li>
-        <li className='list-group-item'>{`Price Range: ${restaurant.hours}`}</li>
+        <li className='list-group-item'>{`Hours: ${restaurant.hours}`}</li>
       </ul>
     </div>
   );
