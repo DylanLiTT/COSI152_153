@@ -35,7 +35,7 @@ export default function App() {
   return (
     <Router>
 
-    <div className='container-fluid'>
+    <div className='container-fluid' className = 'first'>
     <Centered>
           <ul className="nav">
           <LinkStyle>
