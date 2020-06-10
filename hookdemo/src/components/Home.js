@@ -39,7 +39,7 @@ const Home = () => {
         <h3>Welcome!</h3>
         </SubtitleWrapper>
         <TextWrapper>
-        <div>
+        <div className = 'backimg'>
         <p> Welcome to the Waltham Community Forum. With the COVID-19 prevailing, there are a lot of arising
             concerns over the accessibility of food, daily supplies, and housing. Also, it will be important
             to get information about the number of peopled infected nearby.</p>
