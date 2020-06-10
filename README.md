@@ -10,4 +10,5 @@ For Restaurant, we will try to fetch info from Google for their operating status
 
 For COVID-19, we also need the technique of fetching info.
 
-![alt text](https://github.com/kzsteph/COSI152_153/blob/master/Web.png?raw=true)
+![alt text](<Web.png>)
+
