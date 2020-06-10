@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const restaurantCard = ({ restaurant }) => {
+const RestaurantCard = ({ restaurant }) => {
   return (
     <div className='card' class="col-sm-4">
       <img src={restaurant.img.src} height="200" width="80" className='card-img-top' alt={"no pic found"} />
@@ -18,8 +18,8 @@ const restaurantCard = ({ restaurant }) => {
   );
 };
 
-restaurantCard.propTypes = {
+RestaurantCard.propTypes = {
   restaurant: PropTypes.object.isRequired
 }
 
-export default restaurantCard;
+export default RestaurantCard;

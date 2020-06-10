@@ -24,11 +24,7 @@ const FontDemo = () => {
           </p>
           <CardList restaurantdata={restaurantdata} />
         </div>
-
-
-
-)
-
+      )
 }
 
 export default FontDemo;

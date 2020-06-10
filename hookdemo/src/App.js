@@ -21,6 +21,7 @@ text-transform: uppercase;
 display: flex;
 padding: 0px 20px;
 align-items: center;
+box-shadow: 5px 5px 5px #e6e6e6;
 justify-content: center;
 `;
 

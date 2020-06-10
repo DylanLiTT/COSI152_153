@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import restaurantCard from '../components/restaurantCard.js';
+import RestaurantCard from '../components/RestaurantCard';
 import styled from 'styled-components';
-
 
 const CardsWrapper = styled.div`
   display: block-inline;
@@ -14,7 +13,7 @@ const CardList = ({restaurantdata = []}) => {
    <CardsWrapper>
        {restaurantdata.map(res => (
          <div key={res.id} className='flex-container-element'>
-           <restaurantCard restaurant={res} />
+           <RestaurantCard restaurant={res} />
          </div>
        ))}
    </CardsWrapper>
@@ -23,7 +22,6 @@ const CardList = ({restaurantdata = []}) => {
 
 CardList.propTypes = {
     restaurantdata: PropTypes.array.isRequired,
-
 };
 
 
