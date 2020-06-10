@@ -1,14 +1,15 @@
-
-.backimg {
-  background-color: white;
-  background-position:center top;
-  background-size: 100px 100px;
-  padding-top: 25px;
-  opacity:1;
-
-   }
-
 body{
     background: url(waltham.jpg);
     background-repeat:no-repeat;
 }
+
+div {
+    background: rgb(255,255,255);
+    padding:9px;
+    text-align:center;
+    }
+
+div.first {
+    /*setting alpha = 0.1*/
+    background: rgba(255, 255, 255, 0.8);
+           }

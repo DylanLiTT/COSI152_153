@@ -22,9 +22,9 @@ font-weight: bold;
 text-align: left;
 font-family: sans-serif;
 position: absolute;
-top: 160px;
+top: 300px;
 line-height: 120%;
-width: 460px;
+width: 850px;
 margin-left: 420px;
 `;
 
@@ -39,7 +39,7 @@ const Home = () => {
         <h3>Welcome!</h3>
         </SubtitleWrapper>
         <TextWrapper>
-        <div className = 'backimg'>
+        <div className = 'first'>
         <p> Welcome to the Waltham Community Forum. With the COVID-19 prevailing, there are a lot of arising
             concerns over the accessibility of food, daily supplies, and housing. Also, it will be important
             to get information about the number of peopled infected nearby.</p>
