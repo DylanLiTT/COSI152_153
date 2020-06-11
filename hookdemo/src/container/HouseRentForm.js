@@ -81,13 +81,14 @@ const  HouseRentForm = ({data}) => {
                   onChange={flipItem(item)}
                   name={"complete"+item.id}
                   value={!item.complete} />
-                  {item.name} : {item.phone}
+                  {item.name} <br /> {item.phone}<br /> {item.email}<br /> {item.address}<br />
+                  {item.bedroom}<br /> {item.bathroom}<br /> {item.price}<br /> {item.startDate}<br /> {item.endDate}<br /> {item.comment}
          </li>
        ))}
      </ul>
      <form onSubmit={addItem}>
        renter name: <input type="text" id="name" name="renter name" onChange={updateName}/><br />
-       renter phone number: <input type="number" id="phone" name="renter phone number" onChange={updatePhone} /><br />
+       renter phone number: <input type="text" id="phone" name="renter phone number" onChange={updatePhone} /><br />
        renter email address: <input type="email" id="email" name="renter email address" onChange={updateEmail} /><br />
        house address: <input type="text" id="address" name="house address" onChange={updateAddress} /><br />
        number of bedrooms: <input type="number" id="bedroom" name="number of bedrooms" onChange={updateBedroom} /><br />
