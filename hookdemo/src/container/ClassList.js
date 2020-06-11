@@ -8,7 +8,7 @@ const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-const  ClassList = ({data}) => {
+const ClassList = ({data}) => {
   return (
    <CardsWrapper>
        {data.map(house => (
