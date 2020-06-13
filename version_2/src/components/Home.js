@@ -36,6 +36,15 @@ const Home = () => {
         </TitleWrapper>
         <SubtitleWrapper>
           <h2>Welcome!</h2>
+          <div id="login">
+            <form className="login form">
+            <label for="name">User Name</label>
+            <input type="name" name="username" value=""/>
+            <label for="password">Password</label>
+            <input type="password" name="password" value=""/>
+            <input class="button" type="submit" value="submit"/>
+          </form> 
+          </div>   
         </SubtitleWrapper>
         <TextWrapper>
           <p className = 'space'> Welcome to the Waltham Community Forum. With the COVID-19 prevailing, there are a lot of arising
