@@ -79,32 +79,30 @@ const  HouseRentForm = ({data}) => {
    <>
      <h1> Rent House Form </h1>
      <ul>
-      <CardsWrapper>
+       <CardsWrapper>
        {apts
-          .filter(apt=>!apt.complete)
-          .map(apt => (
-            <div className='card'>
-              <input type="checkbox"
-                     onChange={flipApt(apt)}
-                     name={"complete"+apt.id}
-                     value={!apt.complete} />
-              <img src={"no pic found"} />
-              <div className='card-body'>
-                <h2 className='card-title'>{`${apt.name}`}</h2>
-              </div>
-              <div>
-                <h3 className='card-title'>{`Housing Address: ${apt.address}`}</h3>
-              </div>
-              <ul className='list-group list-group-flush'>
-                <li className='list-group-item'>{<p>Contact Info:<br />{apt.phone}<br />{apt.email}</p>}</li>
-                <li className='list-group-item'>{`Housing Layout: ${apt.bedroom}b${apt.bathroom}b`}</li>
-                <li className='list-group-item'>{`Lease Term: ${apt.startDate} - ${apt.endDate}`}</li>
-                <li className='list-group-item'>{`Expected Price: $${apt.price} per month`}</li>
-                <li className='list-group-item'>{`Extra Description: ${apt.comment}`}</li>
-              </ul>
-            </div>
-          ))
-        }</CardsWrapper>
+         .filter(apt=>!apt.complete)
+         .map(apt => (
+           <div className='card'>
+             <input type="checkbox"
+                    onChange={flipApt(apt)}
+                    name={"complete"+apt.id}
+                    value={!apt.complete} />
+             <img src={"no pic found"} />
+             <div className='card-body'>
+               <h2 className='card-title'>{`${apt.address}`}</h2>
+             </div>
+             <ul className='list-group list-group-flush'>
+               <li className='list-group-item'>{<p>Contact Info:<br />{apt.name}<br />{apt.phone}<br />{apt.email}</p>}</li>
+               <li className='list-group-item'>{`Housing Layout: ${apt.bedroom}b${apt.bathroom}b`}</li>
+               <li className='list-group-item'>{`Lease Term: ${apt.startDate} - ${apt.endDate}`}</li>
+               <li className='list-group-item'>{`Expected Price: $${apt.price} per month`}</li>
+               <li className='list-group-item'>{`Extra Description: ${apt.comment}`}</li>
+             </ul>
+           </div>
+         ))
+       }
+       </CardsWrapper>
      </ul>
      <form onSubmit={addApt}>
        renter name: <input type="text" id="name" name="renter name" onChange={updateName}/><br />
