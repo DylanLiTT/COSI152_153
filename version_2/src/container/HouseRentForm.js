@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import useStickyState from '../useStickyState';
 import styled from 'styled-components';
+import '../generalStyle.css';
 
 const  HouseRentForm = ({data}) => {
   // here is where we keep track of the todo list
@@ -84,10 +85,10 @@ const  HouseRentForm = ({data}) => {
          .filter(apt=>!apt.complete)
          .map(apt => (
            <div className='card'>
-             <input type="checkbox"
-                    onChange={flipApt(apt)}
-                    name={"complete"+apt.id}
-                    value={!apt.complete} />
+             <input className = 'close'
+                    type="button"
+                    onClick={flipApt(apt)}
+                    value="close" />
              <img src={"no pic found"} />
              <div className='card-body'>
                <h2 className='card-title'>{`${apt.address}`}</h2>

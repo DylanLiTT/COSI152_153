@@ -12,7 +12,7 @@ import House from "./components/House";
 import Restaurant from "./components/Restaurant";
 import Home from "./components/Home";
 import Covid from "./components/Covid";
-import './background.css'
+import './generalStyle.css'
 
 const LinkStyle = styled.li`
 color: #625a56;
