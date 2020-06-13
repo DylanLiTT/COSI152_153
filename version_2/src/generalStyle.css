@@ -7,15 +7,10 @@ div{
   text-align:center;
 }
 
-div.first {
+div.first{
   background: rgb(255,255,255);
   padding:9px;
   text-align:center;
-}
-
-div.second {
-  /*setting alpha = 0.1*/
-  background: rgba(255, 255, 255, 0.8);
 }
 
 p.space {
