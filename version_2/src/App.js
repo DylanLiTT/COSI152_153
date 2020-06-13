@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import About from "./components/About";
-import FontDemo from "./components/FontDemo";
+import House from "./components/House";
+import Restaurant from "./components/Restaurant";
 import Home from "./components/Home";
 import Covid from "./components/Covid";
 import './background.css'
@@ -45,12 +45,12 @@ export default function App() {
             </LinkStyle>
             <LinkStyle>
             <li className="navItem">
-              <Link to="/about">Houses For Rent&nbsp;</Link>
+              <Link to="/House">Houses For Rent&nbsp;</Link>
             </li>
             </LinkStyle>
             <LinkStyle>
             <li className="navItem">
-              <Link to="/fontDemo">Restaurants Open Now</Link>
+              <Link to="/Restaurant">Restaurants Open Now</Link>
             </li>
             </LinkStyle>
             <LinkStyle>
@@ -64,11 +64,11 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/House">
+            <House />
           </Route>
-          <Route path="/fontDemo">
-            <FontDemo />
+          <Route path="/Restaurant">
+            <Restaurant />
           </Route>
           <Route exact path="/">
             <Home />

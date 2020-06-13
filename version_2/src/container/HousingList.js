@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from "../components/Card.js";
+import HousingCard from "../components/HousingCard.js";
 import styled from 'styled-components';
 import './List.css'
 
@@ -8,22 +8,22 @@ const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-const ClassList = ({data}) => {
+const HousingList = ({housingdata}) => {
   return (
    <CardsWrapper>
-       {data.map(house => (
+       {housingdata.map(house => (
          <div key={house.id} className='flex-container-element'>
-           <Card apt={house} />
+           <HousingCard apt={house} />
          </div>
        ))}
    </CardsWrapper>
  );
 }
 
-ClassList.propTypes = {
-    data: PropTypes.array.isRequired,
+HousingList.propTypes = {
+    housingdata: PropTypes.array.isRequired,
 
 };
 
 
-export default ClassList;
+export default HousingList;

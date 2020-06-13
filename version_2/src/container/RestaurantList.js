@@ -9,7 +9,7 @@ const CardsWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-const CardList = ({restaurantdata = []}) => {
+const RestaurantList = ({restaurantdata = []}) => {
   return (
    <CardsWrapper>
        {restaurantdata.map(res => (
@@ -21,9 +21,9 @@ const CardList = ({restaurantdata = []}) => {
  );
 }
 
-CardList.propTypes = {
+RestaurantList.propTypes = {
     restaurantdata: PropTypes.array.isRequired,
 };
 
 
-export default CardList;
+export default RestaurantList;

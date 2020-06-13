@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import BgColor from "./BgColor";
 import restaurantdata from "../assets/restaurantdata.js";
-import CardList from "../container/CardList";
-const FontDemo = () => {
+import RestaurantList from "../container/RestaurantList";
+const Restaurant = () => {
 
 
     const [bgColor,setBgColor]= useState("white")
@@ -22,9 +22,9 @@ const FontDemo = () => {
           <h3>Restaurants Opening</h3>
           <p> This app shows the restaurant that are currently Opening.
           </p>
-          <CardList restaurantdata={restaurantdata} />
+          <RestaurantList restaurantdata={restaurantdata} />
         </div>
       )
 }
 
-export default FontDemo;
+export default Restaurant;

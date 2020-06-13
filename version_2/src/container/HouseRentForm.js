@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+import useStickyState from '../useStickyState';
 
 const  HouseRentForm = ({data}) => {
   // here is where we keep track of the todo list
-  const [items,updateItems] = useState(data)
+  const [items,updateItems] = useStickyState(data,"HouseRentForm")
 
   // here is where we keep track of the values in the form
   const [name,setName] = useState("")

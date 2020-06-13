@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ apt }) => {
+const HousingCard = ({ apt }) => {
   return (
     <div className='card'>
       <img src={apt.img.src}  className='card-img-top' alt={"no pic found"} />
@@ -18,11 +18,11 @@ const Card = ({ apt }) => {
   );
 };
 
-Card.propTypes = {
+HousingCard.propTypes = {
   apt: PropTypes.object.isRequired
 }
 /*
-Card.propTypes = {
+HousingCard.propTypes = {
   movie: PropTypes.shape({
     title: PropTypes.string,
     distributor: PropTypes.string,
@@ -36,4 +36,4 @@ Card.propTypes = {
   }).isRequired,
 };
 */
-export default Card;
+export default HousingCard;
