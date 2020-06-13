@@ -14,13 +14,9 @@ const Restaurant = () => {
     return (
 
         <div style={divStyle}>
-          <h2>Dark mode</h2>
-          <p>
-            Here we change the mode of this page.
-          </p>
           <BgColor bgColor={bgColor} setBgColor={setBgColor} />
-          <h3>Restaurants Opening</h3>
-          <p> This app shows the restaurant that are currently Opening.
+          <h1>Restaurants Opening</h1>
+          <p> This page shows the restaurant that are currently Opening.
           </p>
           <RestaurantList restaurantdata={restaurantdata} />
         </div>

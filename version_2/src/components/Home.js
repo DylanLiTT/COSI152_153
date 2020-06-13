@@ -34,10 +34,10 @@ const Home = () => {
         <div className='container-fluid'>
         <div className = 'first'>
         <TitleWrapper>
-          <h2>Waltham Community Forum</h2>
+          <h1>Waltham Community Forum</h1>
         </TitleWrapper>
         <SubtitleWrapper>
-        <h3>Welcome!</h3>
+        <h2>Welcome!</h2>
         </SubtitleWrapper>
         </div>
         <div className = 'second'>

@@ -78,7 +78,6 @@ const  HouseRentForm = ({data}) => {
 
   return (
    <>
-     <h1> Rent House Form </h1>
      <ul>
        <CardsWrapper>
        {apts
@@ -106,6 +105,7 @@ const  HouseRentForm = ({data}) => {
        </CardsWrapper>
      </ul>
      <form onSubmit={addApt}>
+       <h2>House Rent Form</h2>
        renter name: <input type="text" id="name" name="renter name" onChange={updateName}/><br />
        renter phone number: <input type="text" id="phone" name="renter phone number" onChange={updatePhone} /><br />
        renter email address: <input type="email" id="email" name="renter email address" onChange={updateEmail} /><br />
@@ -116,7 +116,7 @@ const  HouseRentForm = ({data}) => {
        rental date starting from: <input type="text" id="startDate" name="rental date starting from" onChange={updateStartDate} /><br />
        ental date ending at: <input type="text" id="endDate" name="rental date ending at" onChange={updateEndDate} /><br />
        other comments you want to add: <input type="text" id="comment" name="other comments you want to add" onChange={updateComment} /><br />
-       <input type="submit" value="add item to housing rent" />
+       <input type="submit" value="submit" />
      </form>
    </>
  );
