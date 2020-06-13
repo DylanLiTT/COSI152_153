@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import useStickyState from '../useStickyState';
+import styled from 'styled-components';
 
 const  HouseRentForm = ({data}) => {
   // here is where we keep track of the todo list
-  const [items,updateItems] = useStickyState(data,"HouseRentForm")
+  const [apts,updateApts] = useStickyState(data,"HouseRentForm")
 
   // here is where we keep track of the values in the form
   const [name,setName] = useState("")
@@ -18,14 +19,14 @@ const  HouseRentForm = ({data}) => {
   const [comment, setComment] = useState("")
 
   // this is the action when the submit button is pushed
-  const addItem = (event) => {
-    console.log('adding item ')
+  const addApt = (event) => {
+    console.log('adding apartment')
     console.dir(event)
-    const item = {id:items.length, name:name, phone:phone, email:email,
+    const apt = {id:apts.length, name:name, phone:phone, email:email,
                   address:address, bedroom:bedroom, bathroom:bathroom, price:price,
                   startDate:startDate, endDate:endDate, comment:comment,
                   complete:false}
-    updateItems(items.concat(item))
+    updateApts(apts.concat(apt))
     document.getElementById('name').value = ""
     setName("")
     document.getElementById('phone').value = ""
@@ -57,37 +58,55 @@ const  HouseRentForm = ({data}) => {
   const updateAddress = event => setAddress(event.target.value)
   const updateBedroom = event => setBedroom(event.target.value)
   const updateBathroom = event => setBathroom(event.target.value)
-  const updatePrice = event => setPhone(event.target.value)
+  const updatePrice = event => setPrice(event.target.value)
   const updateStartDate = event => setStartDate(event.target.value)
   const updateEndDate = event => setEndDate(event.target.value)
   const updateComment = event => setComment(event.target.value)
 
-  // handle the action when an item is clicked/completed
-  let flipItem = item => (event) => {
-    item.complete=!item.complete
-    let newitems = items.map(x => (x.id===item.id?item:x))
-    updateItems(newitems)
+  // handle the action when an apt is clicked/completed
+  let flipApt = apt => (event) => {
+    apt.complete=!apt.complete
+    let newApts = apts.map(x => (x.id===apt.id?apt:x))
+    updateApts(newApts)
   }
+
+  const CardsWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+  `;
 
   return (
    <>
      <h1> Rent House Form </h1>
      <ul>
-       {items
-          .filter(item=>!item.complete)
-          .map(item => (
-
-         <li key={item.id}>
-           <input type="checkbox"
-                  onChange={flipItem(item)}
-                  name={"complete"+item.id}
-                  value={!item.complete} />
-                  {item.name} <br /> {item.phone}<br /> {item.email}<br /> {item.address}<br />
-                  {item.bedroom}<br /> {item.bathroom}<br /> {item.price}<br /> {item.startDate}<br /> {item.endDate}<br /> {item.comment}
-         </li>
-       ))}
+      <CardsWrapper>
+       {apts
+          .filter(apt=>!apt.complete)
+          .map(apt => (
+            <div className='card'>
+              <input type="checkbox"
+                     onChange={flipApt(apt)}
+                     name={"complete"+apt.id}
+                     value={!apt.complete} />
+              <img src={"no pic found"} />
+              <div className='card-body'>
+                <h2 className='card-title'>{`${apt.name}`}</h2>
+              </div>
+              <div>
+                <h3 className='card-title'>{`Housing Address: ${apt.address}`}</h3>
+              </div>
+              <ul className='list-group list-group-flush'>
+                <li className='list-group-item'>{<p>Contact Info:<br />{apt.phone}<br />{apt.email}</p>}</li>
+                <li className='list-group-item'>{`Housing Layout: ${apt.bedroom}b${apt.bathroom}b`}</li>
+                <li className='list-group-item'>{`Lease Term: ${apt.startDate} - ${apt.endDate}`}</li>
+                <li className='list-group-item'>{`Expected Price: $${apt.price} per month`}</li>
+                <li className='list-group-item'>{`Extra Description: ${apt.comment}`}</li>
+              </ul>
+            </div>
+          ))
+        }</CardsWrapper>
      </ul>
-     <form onSubmit={addItem}>
+     <form onSubmit={addApt}>
        renter name: <input type="text" id="name" name="renter name" onChange={updateName}/><br />
        renter phone number: <input type="text" id="phone" name="renter phone number" onChange={updatePhone} /><br />
        renter email address: <input type="email" id="email" name="renter email address" onChange={updateEmail} /><br />
