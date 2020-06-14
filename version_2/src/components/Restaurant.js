@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import BgColor from "./BgColor";
 import restaurantdata from "../assets/restaurantdata.js";
 import RestaurantList from "../container/RestaurantList";
+
 const Restaurant = () => {
     const [bgColor,setBgColor]= useState("white")
     const divStyle={backgroundColor: bgColor}

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import useStickyState from '../useStickyState';
 import styled from 'styled-components';
-import '../generalStyle.css';
+import '../houseStyle.css';
 
 const  HouseRentForm = ({data}) => {
   // here is where we keep track of the todo list

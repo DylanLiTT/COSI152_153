@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import useStickyState from '../useStickyState';
 import styled from 'styled-components';
-import '../generalStyle.css';
+import '../homeStyle.css';
 
 const  LoginForm = () => {
-  return 
+  return
   {
-    
+
   };
 }
 
 
-export default LoginForm; 
+export default LoginForm;

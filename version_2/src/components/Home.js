@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import '../generalStyle.css'
+import '../homeStyle.css'
 
 const TitleWrapper = styled.div`
 color: #625a56;
