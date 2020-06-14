@@ -1,3 +1,5 @@
+/*Home Page*/
+
 body{
     background: url(waltham.jpg);
     background-repeat:no-repeat;
@@ -5,6 +7,12 @@ body{
 div{
   background: rgb(255,255,255,0.6);
   text-align:center;
+}
+
+div.login{
+   position: absolute;
+   top: 15px;
+   right: 10px;
 }
 
 div.first{
@@ -19,6 +27,8 @@ p.space {
    padding-right: 30px;
    padding-bottom: 0px;
 }
+
+/* House Rent Page*/
 
 input{
   text-align: center;
