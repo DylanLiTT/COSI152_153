@@ -1,39 +1,33 @@
-/*Home Page*/
-
+/* Home Page */
 body{
-    background: url(waltham.jpg);
-    background-repeat:no-repeat;
+  background: url(waltham.jpg);
+  background-repeat:no-repeat;
 }
 div{
   background: rgb(255,255,255,0.6);
   text-align:center;
 }
-
 div.login{
-   position: absolute;
-   top: 15px;
-   right: 10px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
 }
-
 div.first{
   background: rgb(255,255,255);
   padding:9px;
   text-align:center;
 }
-
 p.space {
-   padding-top: 25px;
-   padding-left: 30px;
-   padding-right: 30px;
-   padding-bottom: 0px;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 0px;
 }
 
-/* House Rent Page*/
-
+/* House Rent Page */
 input{
   text-align: center;
 }
-
 input.close{
   color: #e60000;
   font-size: 13px;

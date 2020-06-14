@@ -89,9 +89,7 @@ const  HouseRentForm = ({data}) => {
                     onClick={flipApt(apt)}
                     value="close" />
              <img src={"no pic found"} />
-             <div className='card-body'>
-               <h2 className='card-title'>{`${apt.address}`}</h2>
-             </div>
+             <h2 className='card-title'>{`${apt.address}`}</h2>
              <ul className='list-group list-group-flush'>
                <li className='list-group-item'>{<p>Contact Info:<br />{apt.name}<br />{apt.phone}<br />{apt.email}</p>}</li>
                <li className='list-group-item'>{`Housing Layout: ${apt.bedroom}b${apt.bathroom}b`}</li>

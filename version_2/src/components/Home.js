@@ -45,7 +45,7 @@ const Home = () => {
             <input type="password" name="password" value=""/>
             <br />
             <input class="button" type="submit" value="submit"/>
-          </form>
+            </form>
           </div>
         </SubtitleWrapper>
         <TextWrapper>
