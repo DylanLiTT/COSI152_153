@@ -83,14 +83,14 @@ const  HouseRentForm = ({data}) => {
        {apts
          .filter(apt=>!apt.complete)
          .map(apt => (
-           <div className='card'>
+           <div className='houseCard'>
              <input className = 'close'
                     type="button"
                     onClick={flipApt(apt)}
                     value="close" />
              <img src={"no pic found"} />
              <h2 className='card-title'>{`${apt.address}`}</h2>
-             <ul className='list-group list-group-flush'>
+             <ul className=' list-group'>
                <li className='list-group-item'>{<p>Contact Info:<br />{apt.name}<br />{apt.phone}<br />{apt.email}</p>}</li>
                <li className='list-group-item'>{`Housing Layout: ${apt.bedroom}b${apt.bathroom}b`}</li>
                <li className='list-group-item'>{`Lease Term: ${apt.startDate} - ${apt.endDate}`}</li>
@@ -102,7 +102,8 @@ const  HouseRentForm = ({data}) => {
        }
        </CardsWrapper>
      </ul>
-     <form onSubmit={addApt}>
+     <form className='houseForm' onSubmit={addApt}>
+     <div className='houseForm2'>
        <h2>House Rent Form</h2>
        renter name: <input type="text" id="name" name="renter name" onChange={updateName}/><br />
        renter phone number: <input type="text" id="phone" name="renter phone number" onChange={updatePhone} /><br />
@@ -115,6 +116,7 @@ const  HouseRentForm = ({data}) => {
        ental date ending at: <input type="text" id="endDate" name="rental date ending at" onChange={updateEndDate} /><br />
        other comments you want to add: <input type="text" id="comment" name="other comments you want to add" onChange={updateComment} /><br />
        <input type="submit" value="submit" />
+     </div>
      </form>
    </>
  );

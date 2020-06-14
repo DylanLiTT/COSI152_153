@@ -1,3 +1,23 @@
+div.houseCard{
+  background: url(sky_1.jpg);
+  background-size: contain;
+}
+
+li.list-group-item{
+  background: url(sky_2.jpg);
+  background-size: cover;
+}
+
+form.houseForm{
+  background: url(apartment.jpg);
+  background-size: cover;
+}
+
+div.houseForm2{
+  background: rgb(255,255,255,0.4);
+  text-align: center;
+}
+
 input{
   text-align: center;
 }
