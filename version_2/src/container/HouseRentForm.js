@@ -18,6 +18,7 @@ const  HouseRentForm = ({data}) => {
   const [startDate, setStartDate] = useState("")
   const [endDate, setEndDate] = useState("")
   const [comment, setComment] = useState("")
+  const [photo, setPhoto] = useState("")
 
   // this is the action when the submit button is pushed
   const addApt = (event) => {
@@ -25,7 +26,7 @@ const  HouseRentForm = ({data}) => {
     console.dir(event)
     const apt = {id:apts.length, name:name, phone:phone, email:email,
                   address:address, bedroom:bedroom, bathroom:bathroom, price:price,
-                  startDate:startDate, endDate:endDate, comment:comment,
+                  startDate:startDate, endDate:endDate, comment:comment, photo: photo,
                   complete:false}
     updateApts(apts.concat(apt))
     document.getElementById('name').value = ""
@@ -48,6 +49,8 @@ const  HouseRentForm = ({data}) => {
     setEndDate("")
     document.getElementById('comment').value = ""
     setComment("")
+    document.getElementById('photo').value = ""
+    setPhoto("")
 
     event.preventDefault()
   }
@@ -63,6 +66,7 @@ const  HouseRentForm = ({data}) => {
   const updateStartDate = event => setStartDate(event.target.value)
   const updateEndDate = event => setEndDate(event.target.value)
   const updateComment = event => setComment(event.target.value)
+  const updatePhoto = event => setPhoto(event.target.value)
 
   // handle the action when an apt is clicked/completed
   let flipApt = apt => (event) => {
@@ -88,7 +92,7 @@ const  HouseRentForm = ({data}) => {
                     type="button"
                     onClick={flipApt(apt)}
                     value="close" />
-             <img src={"no pic found"} />
+             <img src={apt.photo} width = "200px" height = "120px"/>
              <h2 className='card-title'>{`${apt.address}`}</h2>
              <ul className=' list-group'>
                <li className='list-group-item'>{<p>Contact Info:<br />{apt.name}<br />{apt.phone}<br />{apt.email}</p>}</li>
@@ -114,6 +118,7 @@ const  HouseRentForm = ({data}) => {
        expected $ per month: <input type="number" id="price" name="expected $ per month" onChange={updatePrice} /><br />
        rental date starting from: <input type="text" id="startDate" name="rental date starting from" onChange={updateStartDate} /><br />
        ental date ending at: <input type="text" id="endDate" name="rental date ending at" onChange={updateEndDate} /><br />
+       house pic url: <input type="text" id="photo" name="house pic url" onChange={updatePhoto} /><br />
        other comments you want to add: <input type="text" id="comment" name="other comments you want to add" onChange={updateComment} /><br />
        <input type="submit" value="submit" />
      </div>
