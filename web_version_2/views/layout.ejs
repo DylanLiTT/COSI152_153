@@ -28,6 +28,16 @@
 			<a href="/covid19">
 				<span class="button">Covid-19 Latest Updates</span>
 			</a>
+			<% if (!loggedIn) {%>
+				<a href="/auth/google">
+					<span class="button">Login</span>
+				</a>
+				<% } else  { %>
+					<%= user.googleemail %>
+				<a href="/logout">
+					<span class="button">Logout</span>
+				</a>
+				<% } %>
 		</div>
 	</div>
 
