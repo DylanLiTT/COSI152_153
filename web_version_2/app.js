@@ -54,46 +54,11 @@ app.use('/dbdemo',
 app.use('/db',dbRouter);
 // app.use('/todo',toDoRouter);
 
-app.get('/profiles',
-    isLoggedIn,
-    async (req,res,next) => {
-      try {
-        res.locals.profiles = await User.find({})
-        res.render('profiles')
-      }
-      catch(e){
-        next(e)
-      }
-    }
-  )
-
-app.get('/publicprofile/userId:',
-    async (req,res,next) => {
-      try {
-        let userId = req.params.userId
-        res.locals.profile = await User.findOne({_id:userId})
-        res.render('publicprofile')
-      }
-      catch(e){
-        console.log("Error in /profile/userId:")
-        next(e)
-      }
-    }
-)
 
 
 
 const User = require('./models/User');
 
-app.get("/test",async (req,res,next) => {
-  try{
-    const u = await User.find({})
-    console.log("found u "+u)
-  }catch(e){
-    next(e)
-  }
-
-})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
