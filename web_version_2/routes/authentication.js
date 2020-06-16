@@ -7,8 +7,8 @@ this is a router to handle authentication
 
 const session = require("express-session")
 const bodyParser = require("body-parser")
-
-onst mongoose = require( 'mongoose' );
+const flash = require('connect-flash')
+const mongoose = require( 'mongoose' );
 const MongoStore = require('connect-mongo')(session)
 
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
