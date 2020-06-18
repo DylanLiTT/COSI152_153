@@ -56,6 +56,23 @@ app.get("/restaurant", homeController.showRestaurantOpenNow);
 app.get("/contact", homeController.showSignUp);
 app.post("/contact", homeController.postedSignUpForm);
 
+app.get("/covid19",
+  async (req,res,next) => {
+    try {
+      let method = req.params.method
+      let result = await axios.get("https://covidtracking.com/api/v1/states/current.json");
+      //https://covidtracking.com/api/v1/states/daily.json")
+      let data = result['data']
+      if (method=="json"){
+         res.json(data)
+       } else {
+         res.render('covid19',{data:data})
+       }
+    }
+    catch(e){
+      next(e)
+    }
+  })
 
 
 app.use(errorController.pageNotFoundError);
