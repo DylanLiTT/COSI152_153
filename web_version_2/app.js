@@ -7,6 +7,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const User = require('./models/User');
 const mongoose = require( 'mongoose' );
+const axios = require("axios");
 mongoose.connect( 'mongodb://localhost/authDemo');
 
 const db = mongoose.connection;
@@ -56,7 +57,7 @@ app.get("/restaurant", homeController.showRestaurantOpenNow);
 app.get("/contact", homeController.showSignUp);
 app.post("/contact", homeController.postedSignUpForm);
 
-app.get("/covid19",
+app.get("/covid19/:method",
   async (req,res,next) => {
     try {
       let method = req.params.method
@@ -73,7 +74,6 @@ app.get("/covid19",
       next(e)
     }
   })
-
 
 app.use(errorController.pageNotFoundError);
 app.use(errorController.internalServerError);

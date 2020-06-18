@@ -1,8 +1,8 @@
 <div class="container">
 
-    <h1>Covid19 demo</h1>
-
-    <pre>
-        <%= JSON.stringify(data,null,2) %>
-    </pre>
+    <h1>Covid19 Status</h1>
+        <% data.forEach((item) => {%>
+          <hr>
+          <%= item.state %> <%= item.positive %>
+        <%});%>
 </div>
