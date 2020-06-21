@@ -1,0 +1,27 @@
+<h1 style = "text-align: center;">Available Housing</h1> <br>
+
+<div class = "container">
+    <ul>
+    <% houses.forEach(house => {%>
+        <li>
+            <div class="col-sm-6">
+                <p style="text-align: center; font-size: x-large;">
+                  <% house.name %>
+                  <% house.address %>
+                  <% house. %>
+                </p>
+                <p style="text-align: center; font-size: large;">
+                    <% house.address %>
+                    <% house.startDate %>
+                    <% house.endDate %>
+                    <% house.landLordPhone %>
+                    <% house.rent%>
+                  </p>
+            </div>
+            <div class="col-sm-6" style="text-align: center;">
+                <img src= "<% house.picUrl %>" style="width: 250px; height: 120px; vertical-align: center;"/>
+            </div>
+        </li>
+    <% }) %>
+    </ul>
+</div>

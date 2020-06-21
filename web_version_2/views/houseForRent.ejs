@@ -1,7 +1,7 @@
 <div class="col-sm nav-align"><h1 id="title">House For Rent</h1></div>
 
 <h1 style = "text-align: center;">Available Housing</h1> <br>
-  <div>
+  <!-- <div>
     <ul style = "list-style-type: none;">
       <li>
         <div class="col-sm-6">
@@ -47,11 +47,39 @@
 
 
     </ul>
-  </div>
+  </div> -->
 
-  <br><br><br><br>
-
-  <div class="container" style = "text-align: center;">
+  <!-- <div class="container" style = "text-align: center;">
     <p>Fill this form to submit your house information.</p>
-      <a href="/HouseForm.html"> <span class="w3-button w3-white w3-round-xxlarge">house_form</span> </a>
+      <a href="/HouseForm.html"> <span class="w3-button w3-white w3-round-xxlarge">house_form</span> </a> -->
+  
+
+  <div style="text-align: center;">
+    <p>Enter Your House Info If You Want to Rent it Out!</p>
+    <form action="/houseForRent" method="post">
+      <label for="name">Name</label>
+      <input type="text" name="name" value="">
+      <br>
+      <label for="address">Address</label>
+      <input type="text" name="address" value="">
+      <br>
+      <label for="landlordPhone">Landlord Phone</label>
+      <input type="text" name="landlordPhone" value="">
+      <br>
+      <label for="rent">Rent</label>
+      <input type="number" name="rent" value="">
+      <br>
+      <label for="startDate">Start Date</label>
+      <input type="text" name="startDate" value="">
+      <br>
+      <label for="endDate">End Date</label>
+      <input type="text" name="endDate" value="">
+      <br>
+      <label for="picUrl">Picture Url</label>
+      <input type="text" name="picUrl" value="">
+      <br>
+      <input class="button" type="submit" value="submit">
+      </form>
+      <p> We'll get back to you soon!</p>
+      </div>
   </div>

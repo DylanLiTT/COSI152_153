@@ -1,15 +1,18 @@
 "use strict";
 
+const houseInfo =require("./models/houseInfo");
+
 const createError = require('http-errors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 const User = require('./models/User');
-const mongoose = require( 'mongoose' );
 const axios = require("axios");
-mongoose.connect( 'mongodb://localhost/authDemo');
 
+const mongoose = require( 'mongoose' );
+mongoose.connect( 'mongodb://localhost/WalthamForum',
+                  {useNewUrlParserL:true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -52,10 +55,43 @@ app.use('/users', usersRouter);
 
 
 app.get("/houseForRent", homeController.showHouseForRent);
-
 app.get("/restaurant", homeController.showRestaurantOpenNow);
-app.get("/contact", homeController.showSignUp);
-app.post("/contact", homeController.postedSignUpForm);
+app.post("/houseForRent", 
+  async(req, res, next) => {
+    try{
+      let name = req.body.name;
+      let address = req.body.address;
+      let landLordPhone = req.body.landLordPhone;
+      let rent = req.body.rent;
+      let startData  = req.body.startData;
+      let endDate = req.body.endDate;
+      let picUrl  = req.body.picUrl;
+      let newHouseInfo = new houseInfo({address:address, 
+        landLordPhone: landLordPhone, 
+        rent: rent,
+        startData:startData,
+        endDate: endDate,
+        picUrl: picUrl})
+      await newHouseInfo.save();
+      res.redirect("/showHouses");
+    } 
+    catch(e){
+      console.log("Fail to save new house data.")
+    }
+})
+
+
+app.get("/showHouses",
+   async (req,res,next) => {
+     try {
+       res.locals.houses = await houseInfo.find({})
+       res.render('showHouses')
+     }
+     catch(e){
+       next(e)
+     }
+   });
+
 
 app.get("/covid19/:method",
   async (req,res,next) => {
