@@ -61,17 +61,17 @@ app.post("/houseForRent",
     try{
       let name = req.body.name;
       let address = req.body.address;
-      let landLordPhone = req.body.landLordPhone;
+      let landlordPhone = req.body.landlordPhone;
       let rent = req.body.rent;
-      let startData  = req.body.startData;
+      let startDate  = req.body.startDate;
       let endDate = req.body.endDate;
       let picUrl  = req.body.picUrl;
       let newHouseInfo = new houseInfo({
         name: name,
         address: address, 
-        landLordPhone: landLordPhone, 
+        landlordPhone: landlordPhone, 
         rent: rent,
-        startData: startData,
+        startDate: startDate,
         endDate: endDate,
         picUrl: picUrl})
       await newHouseInfo.save();
