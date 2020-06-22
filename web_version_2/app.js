@@ -66,10 +66,12 @@ app.post("/houseForRent",
       let startData  = req.body.startData;
       let endDate = req.body.endDate;
       let picUrl  = req.body.picUrl;
-      let newHouseInfo = new houseInfo({address:address, 
+      let newHouseInfo = new houseInfo({
+        name: name,
+        address: address, 
         landLordPhone: landLordPhone, 
         rent: rent,
-        startData:startData,
+        startData: startData,
         endDate: endDate,
         picUrl: picUrl})
       await newHouseInfo.save();

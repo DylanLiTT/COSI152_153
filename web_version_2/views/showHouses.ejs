@@ -2,24 +2,22 @@
 
 <div class = "container">
     <ul>
-    <% houses.forEach(house => {%>
+    <% houses.forEach(house => { %>
         <li>
             <div class="col-sm-6">
                 <p style="text-align: center; font-size: x-large;">
-                  <% house.name %>
-                  <% house.address %>
-                  <% house. %>
+                  <%= house.name %>
                 </p>
                 <p style="text-align: center; font-size: large;">
-                    <% house.address %>
-                    <% house.startDate %>
-                    <% house.endDate %>
-                    <% house.landLordPhone %>
-                    <% house.rent%>
+                    <%= house.address %><br>
+                    <%= house.startDate %><br>
+                    <%= house.endDate %><br>
+                    <%= house.landLordPhone %><br>
+                    <%= house.rent%><br>
                   </p>
             </div>
             <div class="col-sm-6" style="text-align: center;">
-                <img src= "<% house.picUrl %>" style="width: 250px; height: 120px; vertical-align: center;"/>
+                <img src= "<%= house.picUrl %>" style="width: 250px; height: 120px; vertical-align: center;"/>
             </div>
         </li>
     <% }) %>
